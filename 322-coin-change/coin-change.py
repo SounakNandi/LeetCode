@@ -13,5 +13,5 @@ class Solution:
                 if i - coin >= 0:
                     dp[i] = min(dp[i], 1 + dp[i - coin])
                     
-        # If dp[amount] wasn't updated, return -1; otherwise return the answer
+        # If dp[amount] wasn't updated return -1, otherwise return the answer
         return dp[amount] if dp[amount] != amount + 1 else -1
